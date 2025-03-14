@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, createElement } from 'react';
 import { motion } from 'framer-motion';
-import { FaUser, FaEnvelope, FaPhone, FaHome, FaCheckCircle } from 'react-icons/fa';
+import { FaUser, FaEnvelope, FaPhone, FaHome, FaCheckCircle, FaMapMarkerAlt } from 'react-icons/fa';
 import { BusinessData } from '../types';
 
 interface ContactProps {
@@ -138,7 +138,7 @@ const Contact: React.FC<ContactProps> = ({ business }) => {
             {isSubmitted ? (
               <div className="bg-green-50 border border-green-200 rounded-lg p-8 text-center">
                 <div className="w-16 h-16 bg-green-100 text-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <FaCheckCircle size={30} />
+                  {createElement(FaCheckCircle, { size: 30 })}
                 </div>
                 <h3 className="text-2xl font-bold text-gray-800 mb-2">Thank You!</h3>
                 <p className="text-gray-600 mb-6">
@@ -163,7 +163,7 @@ const Contact: React.FC<ContactProps> = ({ business }) => {
                     </label>
                     <div className="relative">
                       <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <FaUser className="text-gray-400" />
+                        {createElement(FaUser, { className: "text-gray-400" })}
                       </div>
                       <input
                         type="text"
@@ -189,7 +189,7 @@ const Contact: React.FC<ContactProps> = ({ business }) => {
                     </label>
                     <div className="relative">
                       <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <FaEnvelope className="text-gray-400" />
+                        {createElement(FaEnvelope, { className: "text-gray-400" })}
                       </div>
                       <input
                         type="email"
@@ -217,7 +217,7 @@ const Contact: React.FC<ContactProps> = ({ business }) => {
                     </label>
                     <div className="relative">
                       <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <FaPhone className="text-gray-400" />
+                        {createElement(FaPhone, { className: "text-gray-400" })}
                       </div>
                       <input
                         type="tel"
@@ -243,7 +243,7 @@ const Contact: React.FC<ContactProps> = ({ business }) => {
                     </label>
                     <div className="relative">
                       <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                        <FaHome className="text-gray-400" />
+                        {createElement(FaHome, { className: "text-gray-400" })}
                       </div>
                       <select
                         id="service"
@@ -327,7 +327,7 @@ const Contact: React.FC<ContactProps> = ({ business }) => {
                 {business.phone && (
                   <div className="flex items-start">
                     <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center mr-4 flex-shrink-0">
-                      <FaPhone className="text-white" />
+                      {createElement(FaPhone, { className: "text-white" })}
                     </div>
                     <div>
                       <h4 className="font-medium text-white mb-1">Call Us</h4>
@@ -344,7 +344,7 @@ const Contact: React.FC<ContactProps> = ({ business }) => {
                 {business.email_1 && (
                   <div className="flex items-start">
                     <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center mr-4 flex-shrink-0">
-                      <FaEnvelope className="text-white" />
+                      {createElement(FaEnvelope, { className: "text-white" })}
                     </div>
                     <div>
                       <h4 className="font-medium text-white mb-1">Email Us</h4>
@@ -361,7 +361,7 @@ const Contact: React.FC<ContactProps> = ({ business }) => {
                 {business.full_address && (
                   <div className="flex items-start">
                     <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center mr-4 flex-shrink-0">
-                      <FaMapMarkerAlt className="text-white" />
+                      {createElement(FaMapMarkerAlt, { className: "text-white" })}
                     </div>
                     <div>
                       <h4 className="font-medium text-white mb-1">Visit Us</h4>
@@ -388,7 +388,7 @@ const Contact: React.FC<ContactProps> = ({ business }) => {
                   href={`tel:${business.phone}`}
                   className="inline-flex items-center bg-white text-primary-600 hover:bg-white/90 transition-colors font-medium py-2 px-4 rounded-lg"
                 >
-                  <FaPhone className="mr-2" />
+                  {createElement(FaPhone, { className: "mr-2" })}
                   Call for Emergency Service
                 </a>
               </div>

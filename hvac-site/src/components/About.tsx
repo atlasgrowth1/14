@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createElement } from 'react';
 import { motion } from 'framer-motion';
 import { FaCheckCircle, FaClock, FaTools, FaUserTie } from 'react-icons/fa';
 import { BusinessData } from '../types';
@@ -14,19 +14,19 @@ const About: React.FC<AboutProps> = ({ business }) => {
   // Features list for about section
   const features = [
     {
-      icon: <FaCheckCircle className="w-5 h-5 text-primary-500" />,
+      icon: createElement(FaCheckCircle, { className: "w-5 h-5 text-primary-500" }),
       text: 'Licensed & Insured Technicians'
     },
     {
-      icon: <FaClock className="w-5 h-5 text-primary-500" />,
+      icon: createElement(FaClock, { className: "w-5 h-5 text-primary-500" }),
       text: '24/7 Emergency Service'
     },
     {
-      icon: <FaTools className="w-5 h-5 text-primary-500" />,
+      icon: createElement(FaTools, { className: "w-5 h-5 text-primary-500" }),
       text: 'Full Service HVAC Solutions'
     },
     {
-      icon: <FaUserTie className="w-5 h-5 text-primary-500" />,
+      icon: createElement(FaUserTie, { className: "w-5 h-5 text-primary-500" }),
       text: 'Professional & Friendly Staff'
     }
   ];
@@ -132,7 +132,7 @@ const About: React.FC<AboutProps> = ({ business }) => {
                   className="bg-gray-50 p-6 rounded-lg border border-gray-100"
                 >
                   <h4 className="font-bold text-lg mb-3 flex items-center">
-                    <FaClock className="text-primary-500 mr-2" /> Working Hours
+                    {createElement(FaClock, { className: "text-primary-500 mr-2" })} Working Hours
                   </h4>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                     {Object.entries(workingHours).map(([day, hours]) => (

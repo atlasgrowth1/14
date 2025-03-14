@@ -2,6 +2,7 @@
   "name": "hvac-site",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://atlasgrowth1.github.io/14",
   "dependencies": {
     "@headlessui/react": "^2.2.0",
     "@testing-library/dom": "^10.4.0",
@@ -24,6 +25,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -48,8 +51,9 @@
     ]
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.21",
-    "postcss": "^8.5.3",
-    "tailwindcss": "^4.0.14"
+    "autoprefixer": "^10.4.19",
+    "gh-pages": "^6.3.0",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.1"
   }
 }

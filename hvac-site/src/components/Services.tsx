@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createElement } from 'react';
 import { motion } from 'framer-motion';
 import { FaSnowflake, FaFire, FaWrench, FaHome, FaBuilding, FaWind } from 'react-icons/fa';
 import { ServiceItem } from '../types';
@@ -56,19 +56,19 @@ const Services: React.FC = () => {
     
     switch (icon) {
       case 'snowflake':
-        return <FaSnowflake className={iconClasses} />;
+        return createElement(FaSnowflake, { className: iconClasses });
       case 'fire':
-        return <FaFire className={iconClasses} />;
+        return createElement(FaFire, { className: iconClasses });
       case 'wrench':
-        return <FaWrench className={iconClasses} />;
+        return createElement(FaWrench, { className: iconClasses });
       case 'home':
-        return <FaHome className={iconClasses} />;
+        return createElement(FaHome, { className: iconClasses });
       case 'building':
-        return <FaBuilding className={iconClasses} />;
+        return createElement(FaBuilding, { className: iconClasses });
       case 'wind':
-        return <FaWind className={iconClasses} />;
+        return createElement(FaWind, { className: iconClasses });
       default:
-        return <FaWrench className={iconClasses} />;
+        return createElement(FaWrench, { className: iconClasses });
     }
   };
   
